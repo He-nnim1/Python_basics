@@ -9,21 +9,22 @@ video_url = "https://www.youtube.com/watch?v=W1OnIklkCWw"
 
 ydl_opts = {
 
-"format": "bestaudio/best",
 
-"postprocessors": [
+   "format": "bestaudio/best",
 
-{
+   "postprocessors": [
 
-"key": "FFmpegExtractAudio",
+      {
 
-"preferredcodec": "mp3",
+         "key": "FFmpegExtractAudio",
 
-"preferredquality": "192", # You can change to '320' or '0'
+          "preferredcodec": "mp3",
 
-}
+           "preferredquality": "192", # You can change to '320' or '0'
 
-],
+      }
+
+   ],
 
 }
 
@@ -34,3 +35,7 @@ with yt_dlp.YoutubeDL(ydl_opts) as ydl:
     ydl.download([video_url])
 
 print("Download complete!")
+
+# https://justpaste.it/iq3it
+# winget install --id Gyan.FFmpeg -e
+# 'ffmpeg_location': r'C:\ffmpeg\bin',
