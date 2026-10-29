@@ -25,13 +25,25 @@ students = [{"name":"Emerald Bowen","email":"ullamcorper.nisl@yahoo.org","countr
 #     if country == "Nigeria":
 #       print(f"Name is {name} and citizen of {country} and {age} years old")
 
-total = 0
-for s in students:
-    age = s["age"]
-    total = total + age # total += age
-
-avg = total / len(students)
-print(avg)
+# total = 0
+# for s in students:
+#     age = s["age"]
+#     total = total + age # total += age
+#
+# avg = total / len(students)
+# print(avg)
 
 # Lambda expressions
-# TODO sort the list
+# sort the list
+# def get_key(student):
+#     return student['age']
+#
+# age_sorted = sorted(students, key=lambda s:s['age'], reverse=True)
+# for student in age_sorted:
+#     print(student)
+
+
+
+
+
+
