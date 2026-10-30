@@ -33,14 +33,35 @@ students = [{"name":"Emerald Bowen","email":"ullamcorper.nisl@yahoo.org","countr
 # avg = total / len(students)
 # print(avg)
 
-# Lambda expressions
+# Lambda expressions  , key=lambda s:s['age']
 # sort the list
 # def get_key(student):
 #     return student['age']
 #
-# age_sorted = sorted(students, key=lambda s:s['age'], reverse=True)
+# age_sorted = sorted(students, key=get_key)
 # for student in age_sorted:
 #     print(student)
+
+# sorted_age = sorted(students, key= lambda student:student["age"], reverse = True)
+#
+# nigerian_students = []
+# for student in sorted_age:
+#     country = student["country"]
+#     if country == "Nigeria":
+#         nigerian_students.append(student)
+#
+# print(nigerian_students[0])
+
+s_nigeria = []
+for student in students:
+    country = student["country"]
+    if country == "Nigeria":
+        s_nigeria.append(student)
+age_sort = sorted(s_nigeria, key=lambda s: s["age"], reverse=True)
+
+print(age_sort[0])
+
+
 
 
 
