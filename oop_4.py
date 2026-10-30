@@ -18,6 +18,9 @@ class Employee:
         print(self.gender)
         print("***********")
 
+    def print_name(self):
+        print(f"Name is {self.full_names}")
+
 # sub class == child class
 class SalariedEmployee(Employee):
     def __init__(self, name:str, id_no:str, department:str, gender:str, salary:int, tenure:int):
@@ -41,3 +44,5 @@ c1 = CasualWorker("Bob Val", "892378", "HR", "M", 300)
 s1.print_detail()
 c1.print_detail()
 print(c1.calc_wage(7))
+
+c1.print_name()
