@@ -11,7 +11,7 @@ class Employee:
         self.identity_no= id_no
         self.department = department
         self.gender = gender
-    def print_detail(self):
+    def print_details(self):
         print(self.full_names)
         print(self.identity_no)
         print(self.department)
@@ -36,13 +36,26 @@ class CasualWorker(Employee):
     def calc_wage(self, hours:float):
         return hours * self.rate
 
+    # Override
+    def print_details(self):
+        print(f"Rate is {self.rate} per hour")
+        super().print_details() # not a must
+        # print(self.full_names)
+        # print(self.identity_no)
+        # print(self.department)
+        # print(self.gender)
+
+
 
 
 s1 = SalariedEmployee("Nicole San", "345321", "IT", "F", 87_500, 4)
 c1 = CasualWorker("Bob Val", "892378", "HR", "M", 300)
 
-s1.print_detail()
-c1.print_detail()
-print(c1.calc_wage(7))
+# s1.print_details()
+c1.print_details()
+# print(c1.calc_wage(7))
+#
+# c1.print_name()
 
-c1.print_name()
+
+#modules == file and packages
